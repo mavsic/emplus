@@ -1,3 +1,4 @@
-(function () {
-    console.log('It works!');
-})();
+import test from './second';
+
+console.log('It works!');
+test();
