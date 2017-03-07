@@ -1,0 +1,42 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "0.1.0",
+    "command": "npm",
+    "args": [
+        "run"
+    ],
+    "isShellCommand": true,
+    "suppressTaskName": true,
+    "showOutput": "always",
+    "tasks": [
+        {
+            "taskName": "Build",
+            "args": [
+                "webpack",
+                "--",
+                "--progress"
+            ],
+            "isBuildCommand": true
+        },
+        {
+            "taskName": "Watch",
+            "args": [
+                "webpack",
+                "--",
+                "--watch",
+                "--progress"
+            ],
+            "isBackground": true
+        },
+        {
+            "taskName": "Run Dev Server",
+            "args": [
+                "webpack-dev-server",
+                "--",
+                "--progress"
+            ],
+            "isBackground": true
+        }
+    ]
+}
